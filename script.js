@@ -10,7 +10,7 @@ function getQuote() {
     .then((data) => {
       quoteText.innerText = data.content;
       quoteAuthor.innerText = data.author;
-      quoteTag.innerText = data.tags;
+      quoteTag.innerText = data.tags.join(", ");
       btn.innerHTML = `Get New Quote <i class="fa-solid fa-refresh"></i>`
     });
 }
